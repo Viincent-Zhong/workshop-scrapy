@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+import sys
+
+def sumList(l):
+    if type(l) is not list:
+        return "False"
+    conv = list(map(int, filter(lambda e: e.isdigit(), filter(lambda e: isinstance(e, str), l))))
+    if not conv:
+        return "False"
+    return sum(conv)
+
+def main():
+    print (sumList(sys.argv))
+
+if __name__ == "__main__":
+    main()
